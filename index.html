@@ -169,32 +169,9 @@
         <li><a href="https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/where-machines-could-replace-humans-and-where-they-cant-yet">Chui, M., Manyika, J., & Miremadi, M. (2016). "Where machines could replace humans—and where they can't (yet)." McKinsey & Company.</a></li>
     </ol>
 
-    <h2>Conference Presentation: The Danger of Artificial Intelligence</h2>
-    <script>
-        // array of slide images
-        var slideimages = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg","slide5.jpg"]
-        var currentSlide = 0;
-        function showSlide() {
-            document.getElementById('slide').src = slideImages[currentSlide];
-        }
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slideImages.length;
-            showSlide();
-        }
-        function prevSlide() {
-            currentSlide() = (currentSlide - 1 + slideImages.length) % slideImages.length;
-            showSlide()
-        }
-        // function to show a specific slide based on the button clicked
-        function showSlideNumber(slideNumber) {
-            currentSlide = slideNumber - 1;
-            showSlide();
-        }
-        //call showSlide() to display the first slide
-        showSlide();
-    </script>
+      <h3 id="Conference Presentation"><b>Conference Presentation</b></h3>
     <div id="slide-container">
-        <img id="slide" src="slide1.jpg" alt="Slide 1" style="width:100%; max-width800px;">
+        <img id="slide" src="slide1.jpg" alt="Slide 1" style="width:100%; max-width:800px;">
 
         <!-- Previous and Next buttons container -->
         <div class="button-container">
@@ -210,6 +187,34 @@
             <button class="button" onclick="showSlideNumber(4)">4</button>
             <button class="button" onclick="showSlideNumber(5)">5</button>
         </div>
+    </div>
+
+    <!-- Script for slide functionality -->
+    <script>
+        var slideImages = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg", "slide5.jpg"];
+        var currentSlide = 0;
+
+        function showSlide() {
+            document.getElementById('slide').src = slideImages[currentSlide];
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideImages.length;
+            showSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+            showSlide();
+        }
+
+        function showSlideNumber(slideNumber) {
+            currentSlide = slideNumber - 1;
+            showSlide();
+        }
+
+        showSlide();
+    </script>
 
     <style>
         #slide-container {
@@ -220,10 +225,11 @@
         .button-container {
             position: absolute;
             bottom: 0;
-            left: 50%
-            transform:translateX(-50%);
+            left: 50%;
+            transform: translateX(-50%);
             margin-bottom: -100px;
         }
+
         .button {
             padding: 10px 20px;
             background-color: #4CAF50;
@@ -234,16 +240,16 @@
             cursor: pointer;
             margin: 0 5px;
         }
+
         .slide-number-container {
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             margin-bottom: -50px;
-        }  
-        
+        }
     </style>
-    
 </body>
-   
+
 </html>
+
