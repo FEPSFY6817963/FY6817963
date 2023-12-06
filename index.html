@@ -169,7 +169,7 @@
         <li><a href="https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/where-machines-could-replace-humans-and-where-they-cant-yet">Chui, M., Manyika, J., & Miremadi, M. (2016). "Where machines could replace humans—and where they can't (yet)." McKinsey & Company.</a></li>
     </ol>
 
-        <h2>Conference Presentation: The Danger of Artificial Intelligence</h2>
+    <h2>Conference Presentation: The Danger of Artificial Intelligence</h2>
     <script>
         // array of slide images
         var slideimages = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg","slide5.jpg"]
@@ -193,6 +193,56 @@
         //call showSlide() to display the first slide
         showSlide();
     </script>
+    <div id="slide-container">
+        <img id="slide" src="slide1.jpg" alt="Slide 1" style="width:100%; max-width800px;">
+
+        <!-- Previous and Next buttons container -->
+        <div class="button-container">
+            <button class="button" onclick="prevSlide()">Previous</button>
+            <button class="button" onclick="nextSlide()">Next</button>
+        </div>
+
+        <!-- Slide Number buttons container -->
+        <div class="slide-number-container">
+            <button class="button" onclick="showSlideNumber(1)">1</button>
+            <button class="button" onclick="showSlideNumber(2)">2</button>
+            <button class="button" onclick="showSlideNumber(3)">3</button>
+            <button class="button" onclick="showSlideNumber(4)">4</button>
+            <button class="button" onclick="showSlideNumber(5)">5</button>
+        </div>
+
+    <style>
+        #slide-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%
+            transform:translateX(-50%);
+            margin-bottom: -100px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .slide-number-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: -50px;
+        }  
+        
+    </style>
     
 </body>
    
